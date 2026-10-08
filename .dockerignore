@@ -1,0 +1,5 @@
+.git
+.env
+*.duckdb
+*.duckdb.wal
+README.md

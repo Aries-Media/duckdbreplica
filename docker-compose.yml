@@ -1,0 +1,36 @@
+services:
+  duckdb-replica:
+    build: .
+    restart: unless-stopped
+    environment:
+      QUACK_TOKEN: ${QUACK_TOKEN:?Set QUACK_TOKEN in Coolify}
+      QUACK_READONLY_TOKEN: ${QUACK_READONLY_TOKEN:?Set QUACK_READONLY_TOKEN in Coolify}
+      UI_USERNAME: ${UI_USERNAME:-duckdb}
+      UI_PASSWORD: ${UI_PASSWORD:?Set UI_PASSWORD in Coolify}
+      DUCKDB_DATABASE: /data/replica.duckdb
+      QUACK_PORT: "9494"
+      QUACK_READONLY_PORT: "9495"
+      UI_PROXY_PORT: "8080"
+    expose:
+      - "9494"
+      - "9495"
+      - "8080"
+    # Only enable ports if clients outside the Docker network need access.
+    # Protect the published port using host firewall/VPN and TLS proxy.
+    # For the UI (8080), prefer assigning an HTTPS domain in Coolify instead
+    # of publishing the port: Basic Auth credentials require TLS in transit.
+    # ports:
+    #   - "9494:9494"
+    volumes:
+      - duckdb_replica_data:/data
+    healthcheck:
+      # Checks the admin endpoint and the read-only gateway (both critical).
+      # The UI stack is best-effort and not part of the healthcheck.
+      test: ["CMD", "python3", "-c", "import socket; [socket.create_connection(('localhost',p),timeout=3).close() for p in (9494,9495)]"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+      start_period: 120s
+    stop_grace_period: 60s
+volumes:
+  duckdb_replica_data:
