@@ -4,40 +4,16 @@
   "graph": {},
   "nodes": [
     {
-      "id": "scripts_server_read_config",
-      "label": "read_config()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "read_config()",
-      "source_file": "scripts/server.py",
-      "source_location": "L100"
-    },
-    {
-      "id": "scripts_server_write_runtime_files",
-      "label": "write_runtime_files()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "write_runtime_files()",
-      "source_file": "scripts/server.py",
-      "source_location": "L143"
-    },
-    {
-      "id": "scripts_server_child_env",
-      "label": "child_env()",
+      "id": "scripts_server_authz_macro",
+      "label": "authz_macro()",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "main",
       "file_type": "code",
-      "norm_label": "child_env()",
+      "norm_label": "authz_macro()",
       "source_file": "scripts/server.py",
-      "source_location": "L135"
+      "source_location": "L106"
     },
     {
       "id": "scripts_server_main",
@@ -49,7 +25,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/server.py",
-      "source_location": "L215"
+      "source_location": "L237"
     },
     {
       "id": "scripts_server_main_on_signal",
@@ -61,7 +37,7 @@
       "file_type": "code",
       "norm_label": "on_signal()",
       "source_file": "scripts/server.py",
-      "source_location": "L234"
+      "source_location": "L256"
     },
     {
       "id": "scripts_server_main_shutdown",
@@ -73,19 +49,19 @@
       "file_type": "code",
       "norm_label": "shutdown()",
       "source_file": "scripts/server.py",
-      "source_location": "L220"
+      "source_location": "L242"
     },
     {
-      "id": "scripts_server_main_start_ui_stack",
-      "label": "start_ui_stack()",
+      "id": "scripts_server_read_config",
+      "label": "read_config()",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "main",
       "file_type": "code",
-      "norm_label": "start_ui_stack()",
+      "norm_label": "read_config()",
       "source_file": "scripts/server.py",
-      "source_location": "L272"
+      "source_location": "L122"
     },
     {
       "id": "scripts_server_sql_literal",
@@ -97,43 +73,79 @@
       "file_type": "code",
       "norm_label": "sql_literal()",
       "source_file": "scripts/server.py",
-      "source_location": "L96"
+      "source_location": "L102"
+    },
+    {
+      "id": "scripts_server_write_runtime_files",
+      "label": "write_runtime_files()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "main",
+      "file_type": "code",
+      "norm_label": "write_runtime_files()",
+      "source_file": "scripts/server.py",
+      "source_location": "L167"
+    },
+    {
+      "id": "scripts_server_child_env",
+      "label": "child_env()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "start_ui_stack",
+      "file_type": "code",
+      "norm_label": "child_env()",
+      "source_file": "scripts/server.py",
+      "source_location": "L157"
+    },
+    {
+      "id": "scripts_server_main_start_ui_stack",
+      "label": "start_ui_stack()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "start_ui_stack",
+      "file_type": "code",
+      "norm_label": "start_ui_stack()",
+      "source_file": "scripts/server.py",
+      "source_location": "L286"
+    },
+    {
+      "id": "scripts_server_prepare_ui_dir",
+      "label": "prepare_ui_dir()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "start_ui_stack",
+      "file_type": "code",
+      "norm_label": "prepare_ui_dir()",
+      "source_file": "scripts/server.py",
+      "source_location": "L194"
     },
     {
       "id": "scripts_server_start_duckdb",
       "label": "start_duckdb()",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
-      "community_name": "main",
+      "community": 3,
+      "community_name": "start_ui_stack",
       "file_type": "code",
       "norm_label": "start_duckdb()",
       "source_file": "scripts/server.py",
-      "source_location": "L181"
+      "source_location": "L201"
     },
     {
       "id": "scripts_server_wait_for_port",
       "label": "wait_for_port()",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
-      "community_name": "main",
+      "community": 3,
+      "community_name": "start_ui_stack",
       "file_type": "code",
       "norm_label": "wait_for_port()",
       "source_file": "scripts/server.py",
-      "source_location": "L199"
-    },
-    {
-      "id": "scripts_server_create_gateway_secret",
-      "label": "create_gateway_secret()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "create_gateway_secret",
-      "file_type": "code",
-      "norm_label": "create_gateway_secret()",
-      "source_file": "scripts/server.py",
-      "source_location": "L165"
+      "source_location": "L221"
     },
     {
       "id": "scripts_server",
@@ -158,22 +170,22 @@
       "source_location": "L2"
     },
     {
-      "id": "scripts_server_rationale_136",
-      "label": "Environment for children that must not see any secret.",
+      "id": "scripts_server_rationale_107",
+      "label": "Authorization hook, persisted in the replica catalog so the transient server-\u2026",
       "_origin": "ast",
       "community": 1,
       "community_name": "main",
       "file_type": "rationale",
-      "norm_label": "environment for children that must not see any secret.",
+      "norm_label": "authorization hook, persisted in the replica catalog so the transient server-...",
       "source_file": "scripts/server.py",
-      "source_location": "L136"
+      "source_location": "L107"
     },
     {
       "id": "readme",
       "label": "README.md",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -185,7 +197,7 @@
       "label": "Architecture",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "architecture",
@@ -197,22 +209,22 @@
       "label": "Coolify deployment",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "coolify deployment",
       "source_file": "README.md",
-      "source_location": "L32"
+      "source_location": "L15"
     },
     {
-      "id": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
-      "label": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "id": "readme_duckdb_quack_receiver_for_coolify",
+      "label": "DuckDB Quack receiver for Coolify",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "duckdb 2.0-dev quack receiver for coolify",
+      "norm_label": "duckdb quack receiver for coolify",
       "source_file": "README.md",
       "source_location": "L1"
     },
@@ -221,19 +233,19 @@
       "label": "DuckDB UI (read-only access)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "duckdb ui (read-only access)",
       "source_file": "README.md",
-      "source_location": "L42"
+      "source_location": "L56"
     },
     {
       "id": "readme_important_limitations",
       "label": "Important limitations",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "important limitations",
@@ -245,39 +257,40 @@
       "label": "Primary-to-secondary example (manual copy, not streaming replication)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "primary-to-secondary example (manual copy, not streaming replication)",
       "source_file": "README.md",
-      "source_location": "L56"
+      "source_location": "L28"
     },
     {
       "id": "readme_read_only_user",
       "label": "Read-only user",
       "_origin": "ast",
       "community": 2,
-      "community_name": "DuckDB 2.0-dev Quack receiver for Coolify",
+      "community_name": "DuckDB Quack receiver for Coolify",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "read-only user",
       "source_file": "README.md",
-      "source_location": "L18"
+      "source_location": "L42"
     },
     {
-      "id": "scripts_server_rationale_166",
-      "label": "Store the admin token as a persistent quack secret, scoped to the owner's\u2026",
+      "id": "scripts_server_rationale_158",
+      "label": "Environment for children that must not see any secret.",
       "_origin": "ast",
       "community": 3,
-      "community_name": "create_gateway_secret",
+      "community_name": "start_ui_stack",
       "file_type": "rationale",
-      "norm_label": "store the admin token as a persistent quack secret, scoped to the owner's...",
+      "norm_label": "environment for children that must not see any secret.",
       "source_file": "scripts/server.py",
-      "source_location": "L166"
+      "source_location": "L158"
     },
     {
       "id": "os",
       "label": "os",
+      "_origin": "semantic",
       "community": 0,
       "community_name": "server.py",
       "external": true,
@@ -289,6 +302,7 @@
     {
       "id": "signal",
       "label": "signal",
+      "_origin": "semantic",
       "community": 0,
       "community_name": "server.py",
       "external": true,
@@ -300,6 +314,7 @@
     {
       "id": "socket",
       "label": "socket",
+      "_origin": "semantic",
       "community": 0,
       "community_name": "server.py",
       "external": true,
@@ -311,6 +326,7 @@
     {
       "id": "subprocess",
       "label": "subprocess",
+      "_origin": "semantic",
       "community": 0,
       "community_name": "server.py",
       "external": true,
@@ -322,6 +338,7 @@
     {
       "id": "sys",
       "label": "sys",
+      "_origin": "semantic",
       "community": 0,
       "community_name": "server.py",
       "external": true,
@@ -333,6 +350,7 @@
     {
       "id": "time",
       "label": "time",
+      "_origin": "semantic",
       "community": 0,
       "community_name": "server.py",
       "external": true,
@@ -340,11 +358,22 @@
       "norm_label": "time",
       "source_file": "",
       "type": "external"
+    },
+    {
+      "id": "shutil",
+      "label": "shutil",
+      "community": 0,
+      "community_name": "server.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "shutil",
+      "source_file": "",
+      "type": "external"
     }
   ],
   "links": [
     {
-      "source": "scripts_server_create_gateway_secret",
+      "source": "scripts_server_authz_macro",
       "target": "scripts_server_sql_literal",
       "relation": "calls",
       "_origin": "ast",
@@ -352,7 +381,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L171",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -364,7 +393,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L216",
+      "source_location": "L238",
       "weight": 1.0
     },
     {
@@ -376,7 +405,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L217",
+      "source_location": "L239",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server_main",
+      "target": "scripts_server_authz_macro",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/server.py",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -388,7 +429,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L243",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -400,7 +441,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L247",
+      "source_location": "L276",
       "weight": 1.0
     },
     {
@@ -412,31 +453,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L248",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server_main",
-      "target": "scripts_server_create_gateway_secret",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/server.py",
-      "source_location": "L254",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server_main",
-      "target": "scripts_server_child_env",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/server.py",
-      "source_location": "L262",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -448,7 +465,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L235",
+      "source_location": "L257",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server_main_start_ui_stack",
+      "target": "scripts_server_prepare_ui_dir",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/server.py",
+      "source_location": "L287",
       "weight": 1.0
     },
     {
@@ -460,19 +489,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L276",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server_main_start_ui_stack",
-      "target": "scripts_server_child_env",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/server.py",
-      "source_location": "L280",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -484,7 +501,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L280",
+      "source_location": "L295",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server_main_start_ui_stack",
+      "target": "scripts_server_child_env",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/server.py",
+      "source_location": "L298",
       "weight": 1.0
     },
     {
@@ -496,7 +525,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L281",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -508,7 +537,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L220",
+      "source_location": "L242",
       "weight": 1.0
     },
     {
@@ -520,7 +549,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/server.py",
-      "source_location": "L272",
+      "source_location": "L286",
       "weight": 1.0
     },
     {
@@ -532,48 +561,12 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "scripts/server.py",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server",
-      "target": "signal",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "scripts/server.py",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server",
-      "target": "socket",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "scripts/server.py",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server",
-      "target": "subprocess",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "scripts/server.py",
       "source_location": "L34",
       "weight": 1.0
     },
     {
       "source": "scripts_server",
-      "target": "sys",
+      "target": "shutil",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -585,7 +578,7 @@
     },
     {
       "source": "scripts_server",
-      "target": "time",
+      "target": "signal",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -596,8 +589,56 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_server",
+      "target": "socket",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/server.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server",
+      "target": "subprocess",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/server.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server",
+      "target": "sys",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/server.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server",
+      "target": "time",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/server.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
       "source": "readme",
-      "target": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
+      "target": "readme_duckdb_quack_receiver_for_coolify",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -607,30 +648,30 @@
       "weight": 1.0
     },
     {
-      "source": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
-      "target": "readme_read_only_user",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
+      "source": "readme_duckdb_quack_receiver_for_coolify",
       "target": "readme_coolify_deployment",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
-      "source": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
-      "target": "readme_duckdb_ui_read_only_access",
+      "source": "readme_duckdb_quack_receiver_for_coolify",
+      "target": "readme_primary_to_secondary_example_manual_copy_not_streaming_replication",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_duckdb_quack_receiver_for_coolify",
+      "target": "readme_read_only_user",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -640,7 +681,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
+      "source": "readme_duckdb_quack_receiver_for_coolify",
       "target": "readme_architecture",
       "relation": "contains",
       "_origin": "ast",
@@ -651,8 +692,8 @@
       "weight": 1.0
     },
     {
-      "source": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
-      "target": "readme_primary_to_secondary_example_manual_copy_not_streaming_replication",
+      "source": "readme_duckdb_quack_receiver_for_coolify",
+      "target": "readme_duckdb_ui_read_only_access",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -662,7 +703,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_duckdb_2_0_dev_quack_receiver_for_coolify",
+      "source": "readme_duckdb_quack_receiver_for_coolify",
       "target": "readme_important_limitations",
       "relation": "contains",
       "_origin": "ast",
@@ -674,13 +715,35 @@
     },
     {
       "source": "scripts_server",
+      "target": "scripts_server_sql_literal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/server.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server",
+      "target": "scripts_server_authz_macro",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/server.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_server",
       "target": "scripts_server_read_config",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L100",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -691,7 +754,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L135",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -702,18 +765,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L143",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
       "source": "scripts_server",
-      "target": "scripts_server_create_gateway_secret",
+      "target": "scripts_server_prepare_ui_dir",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L165",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -724,7 +787,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L181",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -735,7 +798,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L199",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -746,40 +809,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L215",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
-      "source": "scripts_server",
-      "target": "scripts_server_sql_literal",
-      "relation": "contains",
+      "source": "scripts_server_rationale_107",
+      "target": "scripts_server_authz_macro",
+      "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L96",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
-      "source": "scripts_server_rationale_136",
+      "source": "scripts_server_rationale_158",
       "target": "scripts_server_child_env",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/server.py",
-      "source_location": "L136",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_server_rationale_166",
-      "target": "scripts_server_create_gateway_secret",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/server.py",
-      "source_location": "L166",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -802,9 +854,10 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "scripts/server.py",
-      "source_location": "L237",
+      "source_location": "L259",
       "weight": 1.0
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "127648bb5748ac320e3541d191c18119ddcc5c84"
 }

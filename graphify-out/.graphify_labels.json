@@ -1,6 +1,6 @@
 {
   "0": "server.py",
   "1": "main",
-  "2": "DuckDB 2.0-dev Quack receiver for Coolify",
-  "3": "create_gateway_secret"
+  "2": "DuckDB Quack receiver for Coolify",
+  "3": "start_ui_stack"
 }
